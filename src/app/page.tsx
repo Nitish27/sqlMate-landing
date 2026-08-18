@@ -114,7 +114,7 @@ export default function Home() {
             Modern, fast, and easy to use SQL GUI. SqlMate is a lightning-fast, native database GUI built with Rust and Tauri. Now featuring AI that writes your queries for you.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <TrackedDownloadLink href={DOWNLOAD_URL} version={CURRENT_VERSION} download className="flex items-center gap-2 bg-accent hover:bg-accent/80 text-white px-8 py-3 rounded-full font-medium transition-all hover:scale-105 glow">
+            <TrackedDownloadLink captureLead href={DOWNLOAD_URL} version={CURRENT_VERSION} download className="flex items-center gap-2 bg-accent hover:bg-accent/80 text-white px-8 py-3 rounded-full font-medium transition-all hover:scale-105 glow">
               <Download size={20} />
               Download for macOS
             </TrackedDownloadLink>
@@ -185,7 +185,7 @@ export default function Home() {
           <div className="absolute top-0 right-0 w-64 h-64 bg-accent blur-[100px] opacity-20 rounded-full translate-x-1/2 -translate-y-1/2" />
           <h2 className="text-3xl font-bold mb-6">Ready to upgrade your workflow?</h2>
           <p className="text-text-secondary mb-10 text-lg">Download the latest version of SqlMate for macOS. It is free, open-source, and starts immediately.</p>
-          <TrackedDownloadLink href={DOWNLOAD_URL} version={CURRENT_VERSION} download className="inline-flex items-center gap-2 bg-accent hover:bg-accent/80 text-white px-8 py-4 rounded-full font-medium transition-all hover:scale-105 glow text-lg">
+          <TrackedDownloadLink captureLead href={DOWNLOAD_URL} version={CURRENT_VERSION} download className="inline-flex items-center gap-2 bg-accent hover:bg-accent/80 text-white px-8 py-4 rounded-full font-medium transition-all hover:scale-105 glow text-lg">
             <Download size={24} />
             Download Now
           </TrackedDownloadLink>
