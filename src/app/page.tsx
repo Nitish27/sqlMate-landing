@@ -1,9 +1,83 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import { Terminal, Database, Sparkles, Download, Github } from "lucide-react";
+import { TrackedDownloadLink } from "./TrackedDownloadLink";
+
+const CURRENT_VERSION = "0.4.1";
+const DOWNLOAD_URL = `https://sqlmate.io/downloads/SqlMate_${CURRENT_VERSION}_x64.dmg`;
+
+export const metadata: Metadata = {
+  title: "Native SQL Client for macOS",
+  description:
+    "SqlMate is a native macOS database client for PostgreSQL, MySQL, and SQLite with table browsing, query editing, and AI-assisted SQL.",
+  keywords: [
+    "native sql client",
+    "macOS database client",
+    "postgresql gui",
+    "mysql gui",
+    "sqlite browser",
+    "ai sql",
+    "sql editor",
+  ],
+  alternates: {
+    canonical: "https://sqlmate.io/",
+  },
+  openGraph: {
+    url: "https://sqlmate.io/",
+    title: "SqlMate — Native SQL client for macOS",
+    description:
+      "Fast native database client for PostgreSQL, MySQL, and SQLite with AI-assisted SQL and a focused macOS workflow.",
+    images: [
+      {
+        url: "/ai-image.png",
+        width: 1200,
+        height: 800,
+        alt: "SqlMate interface preview",
+      },
+    ],
+  },
+  twitter: {
+    title: "SqlMate — Native SQL client for macOS",
+    description:
+      "Fast native database client for PostgreSQL, MySQL, and SQLite with AI-assisted SQL and a focused macOS workflow.",
+    images: ["/ai-image.png"],
+  },
+};
+
+const softwareApplicationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "SqlMate",
+  applicationCategory: "DeveloperApplication",
+  operatingSystem: "macOS",
+  offers: {
+    "@type": "Offer",
+    price: "0",
+    priceCurrency: "USD",
+  },
+  description:
+    "SqlMate is a native macOS database client for PostgreSQL, MySQL, and SQLite with table browsing, query editing, and AI-assisted SQL.",
+  url: "https://sqlmate.io/",
+  downloadUrl: DOWNLOAD_URL,
+  softwareVersion: CURRENT_VERSION,
+  screenshot: "https://sqlmate.io/ai-image.png",
+  author: {
+    "@type": "Person",
+    name: "Nitish",
+    url: "https://github.com/Nitish27",
+  },
+  license: "https://opensource.org/licenses/MIT",
+};
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-background text-foreground overflow-hidden">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(softwareApplicationJsonLd),
+        }}
+      />
       {/* Navigation */}
       <header>
         <nav className="fixed top-0 w-full z-50 glass border-b border-white/5" aria-label="Main navigation">
@@ -14,9 +88,11 @@ export default function Home() {
             </div>
             <div className="flex items-center gap-4">
               <a href="https://github.com/Nitish27/sqlMate" className="text-text-muted hover:text-white transition-colors">GitHub</a>
-              <a href="https://sqlmate.io/downloads/SqlMate_0.4.1_x64.dmg" download className="bg-accent hover:bg-accent/80 text-white px-4 py-2 rounded-full text-sm font-medium transition-colors">
+              <a href="/support" className="text-text-muted hover:text-white transition-colors">Support</a>
+              <a href="/privacy" className="text-text-muted hover:text-white transition-colors">Privacy</a>
+              <TrackedDownloadLink href={DOWNLOAD_URL} version={CURRENT_VERSION} download className="bg-accent hover:bg-accent/80 text-white px-4 py-2 rounded-full text-sm font-medium transition-colors">
                 Download
-              </a>
+              </TrackedDownloadLink>
             </div>
           </div>
         </nav>
@@ -38,15 +114,18 @@ export default function Home() {
             Modern, fast, and easy to use SQL GUI. SqlMate is a lightning-fast, native database GUI built with Rust and Tauri. Now featuring AI that writes your queries for you.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="https://sqlmate.io/downloads/SqlMate_0.4.1_x64.dmg" download className="flex items-center gap-2 bg-accent hover:bg-accent/80 text-white px-8 py-3 rounded-full font-medium transition-all hover:scale-105 glow">
+            <TrackedDownloadLink captureLead href={DOWNLOAD_URL} version={CURRENT_VERSION} download className="flex items-center gap-2 bg-accent hover:bg-accent/80 text-white px-8 py-3 rounded-full font-medium transition-all hover:scale-105 glow">
               <Download size={20} />
               Download for macOS
-            </a>
+            </TrackedDownloadLink>
             <a href="https://github.com/Nitish27/sqlMate" target="_blank" className="flex items-center gap-2 bg-surface hover:bg-[#333] border border-border text-white px-8 py-3 rounded-full font-medium transition-colors">
               <Github size={20} />
               View Source
             </a>
           </div>
+          <p className="mt-4 text-sm text-text-muted">
+            Free and open-source. No signup required.
+          </p>
 
           {/* App Preview Frame */}
           <div className="mt-20 relative mx-auto max-w-5xl">
@@ -105,15 +184,15 @@ export default function Home() {
         <section id="download" aria-label="Download SqlMate" className="max-w-4xl mx-auto mt-40 text-center glass rounded-3xl p-12 border border-accent/20 relative overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 bg-accent blur-[100px] opacity-20 rounded-full translate-x-1/2 -translate-y-1/2" />
           <h2 className="text-3xl font-bold mb-6">Ready to upgrade your workflow?</h2>
-          <p className="text-text-secondary mb-10 text-lg">Download the latest version of SqlMate for macOS. It's free and open-source.</p>
-          <a href="https://sqlmate.io/downloads/SqlMate_0.4.1_x64.dmg" download className="inline-flex items-center gap-2 bg-accent hover:bg-accent/80 text-white px-8 py-4 rounded-full font-medium transition-all hover:scale-105 glow text-lg">
+          <p className="text-text-secondary mb-10 text-lg">Download the latest version of SqlMate for macOS. It is free, open-source, and starts immediately.</p>
+          <TrackedDownloadLink captureLead href={DOWNLOAD_URL} version={CURRENT_VERSION} download className="inline-flex items-center gap-2 bg-accent hover:bg-accent/80 text-white px-8 py-4 rounded-full font-medium transition-all hover:scale-105 glow text-lg">
             <Download size={24} />
             Download Now
-          </a>
+          </TrackedDownloadLink>
           <p className="mt-6 text-sm text-text-muted">
-            Currently available for macOS. Expected to launch for Windows/Linux soon. 
+            Currently available for macOS. Expected to launch for Windows/Linux soon.
             <br />
-            Right-click and select "Open" on first launch to bypass Mac Gatekeeper.
+            Right-click and select &quot;Open&quot; on first launch to bypass Mac Gatekeeper.
           </p>
         </section>
 
@@ -196,6 +275,8 @@ export default function Home() {
         <div className="mt-4 flex justify-center gap-4">
           <a href="https://github.com/Nitish27/sqlMate" className="hover:text-white transition-colors">GitHub</a>
           <a href="https://github.com/Nitish27/sqlMate/issues" className="hover:text-white transition-colors">Report an Issue</a>
+          <a href="/support" className="hover:text-white transition-colors">Support</a>
+          <a href="/privacy" className="hover:text-white transition-colors">Privacy</a>
         </div>
       </footer>
     </div>

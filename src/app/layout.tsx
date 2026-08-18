@@ -14,27 +14,27 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://sqlmate.io"),
-  title: "SqlMate — The Modern Native SQL Client with AI | Free for macOS",
+  title: {
+    default: "SqlMate",
+    template: "%s | SqlMate",
+  },
   description:
-    "Free, lightning-fast native database GUI for macOS (Rust & Tauri). Connect to PostgreSQL, MySQL, SQLite. Generate SQL from plain English using AI.",
+    "Native macOS SQL client for PostgreSQL, MySQL, and SQLite with fast table browsing, query editing, and AI-assisted SQL.",
   keywords: [
-    "SQL client",
-    "database GUI",
-    "macOS database app",
-    "native SQL editor",
-    "AI SQL generator",
-    "text to SQL",
-    "PostgreSQL client",
-    "MySQL client",
-    "SQLite browser",
-    "Tauri app",
-    "Rust database tool",
-    "free SQL client",
-    "open source database GUI",
+    "sql client",
+    "database client",
+    "database gui",
+    "macOS sql client",
+    "native sql editor",
+    "postgresql client",
+    "mysql client",
+    "sqlite browser",
+    "ai sql",
     "SqlMate",
   ],
   authors: [{ name: "Nitish", url: "https://github.com/Nitish27" }],
   creator: "Nitish",
+  applicationName: "SqlMate",
   robots: {
     index: true,
     follow: true,
@@ -43,58 +43,14 @@ export const metadata: Metadata = {
       follow: true,
     },
   },
-  alternates: {
-    canonical: "https://sqlmate.io",
-  },
   openGraph: {
     type: "website",
-    url: "https://sqlmate.io",
     siteName: "SqlMate",
-    title: "SqlMate — The Modern Native SQL Client with AI",
-    description:
-      "Free native database GUI for macOS. Connect to Postgres, MySQL, & SQLite. Generate SQL from plain English using AI. Built with Rust & Tauri.",
-    images: [
-      {
-        url: "/ai-image.png",
-        width: 1200,
-        height: 800,
-        alt: "SqlMate — AI-powered SQL client for macOS",
-      },
-    ],
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "SqlMate — The Modern Native SQL Client with AI",
-    description:
-      "Free native database GUI for macOS. Connect to Postgres, MySQL, & SQLite. Generate SQL from plain English using AI. Built with Rust & Tauri.",
-    images: ["/ai-image.png"],
   },
-};
-
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  name: "SqlMate",
-  applicationCategory: "DeveloperApplication",
-  operatingSystem: "macOS",
-  offers: {
-    "@type": "Offer",
-    price: "0",
-    priceCurrency: "USD",
-  },
-  description:
-    "Free, lightning-fast native database GUI for macOS (Rust & Tauri). Connect to PostgreSQL, MySQL, SQLite. Generate SQL from plain English using AI.",
-  url: "https://sqlmate.io",
-  downloadUrl: "https://sqlmate.io/downloads/SqlMate_0.4.1_x64.dmg",
-  softwareVersion: "0.4.1",
-  screenshot: "https://sqlmate.io/ai-image.png",
-  author: {
-    "@type": "Person",
-    name: "Nitish",
-    url: "https://github.com/Nitish27",
-  },
-  license: "https://opensource.org/licenses/MIT",
 };
 
 export default function RootLayout({
@@ -104,12 +60,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
