@@ -19,12 +19,13 @@ export const metadata: Metadata = {
     template: "%s | SqlMate",
   },
   description:
-    "Native macOS SQL client for PostgreSQL, MySQL, and SQLite with fast table browsing, query editing, and AI-assisted SQL.",
+    "Desktop SQL client for macOS and Windows with PostgreSQL, MySQL, and SQLite support, table browsing, query editing, and optional AI-assisted SQL.",
   keywords: [
     "sql client",
     "database client",
     "database gui",
     "macOS sql client",
+    "Windows sql client",
     "native sql editor",
     "postgresql client",
     "mysql client",

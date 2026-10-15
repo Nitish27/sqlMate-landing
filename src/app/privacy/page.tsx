@@ -6,11 +6,12 @@ import { ArrowLeft, ShieldCheck } from "lucide-react";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "Privacy policy for SqlMate, covering local storage, selected files, AI-assisted SQL requests, and how the macOS SQL client handles data.",
+    "Privacy policy for SqlMate on macOS and Windows, covering local storage, selected files, AI-assisted SQL requests, and usage telemetry.",
   keywords: [
     "SqlMate privacy policy",
     "database client privacy",
     "macOS app privacy policy",
+    "Windows app privacy policy",
   ],
   alternates: {
     canonical: "https://sqlmate.io/privacy/",
@@ -41,7 +42,7 @@ export const metadata: Metadata = {
   },
 };
 
-const updatedOn = "June 18, 2026";
+const updatedOn = "October 13, 2026";
 
 export default function PrivacyPage() {
   return (
@@ -67,7 +68,7 @@ export default function PrivacyPage() {
           </div>
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">SqlMate Privacy Policy</h1>
           <p className="text-text-secondary text-lg leading-relaxed">
-            This policy explains how the SqlMate desktop app handles information when you use it on macOS.
+            This policy explains how the SqlMate desktop app and website handle information when you use SqlMate on macOS or Windows.
           </p>
           <p className="text-text-muted mt-4">Last updated: {updatedOn}</p>
         </div>
@@ -78,7 +79,7 @@ export default function PrivacyPage() {
             <p className="text-text-secondary leading-relaxed">
               SqlMate stores saved connection settings, query history, and user interface state locally on your device
               to make the app easier to use across sessions. Database passwords, when saved, are stored through the
-              operating system keychain instead of plain text storage.
+              operating system credential store instead of plain text storage.
             </p>
           </section>
 
@@ -114,6 +115,11 @@ export default function PrivacyPage() {
               collect limited first-party telemetry such as download-button clicks, anonymous installation identifiers,
               app version, platform, and activity timestamps to understand product usage. This telemetry is not used
               for advertising and does not include database contents, query text, or saved hostnames.
+            </p>
+            <p className="text-text-secondary leading-relaxed mt-4">
+              If you voluntarily sign up for product updates on the website, we collect the email address and
+              personal or organization usage preference you provide, along with the download platform and version.
+              Signing up is optional and is not required to download or use SqlMate.
             </p>
           </section>
 

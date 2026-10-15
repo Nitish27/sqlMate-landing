@@ -6,12 +6,13 @@ import { ArrowLeft, Bug, ExternalLink, Github, MessageSquare } from "lucide-reac
 export const metadata: Metadata = {
   title: "Support",
   description:
-    "Support resources for SqlMate, including bug reports, feature requests, setup help, and App Store support for the macOS SQL client.",
+    "Support for the SqlMate desktop SQL client on macOS and Windows, including installation help, bug reports, and feature requests.",
   keywords: [
     "SqlMate support",
     "SqlMate help",
     "database client support",
     "macOS SQL client support",
+    "Windows SQL client support",
   ],
   alternates: {
     canonical: "https://sqlmate.io/support/",
@@ -66,7 +67,7 @@ export default function SupportPage() {
           </div>
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">Need help with SqlMate?</h1>
           <p className="text-lg text-text-secondary leading-relaxed">
-            SqlMate is an open-source macOS SQL client for PostgreSQL, MySQL, and SQLite.
+            SqlMate is an open-source SQL client for macOS and Windows, supporting PostgreSQL, MySQL, and SQLite.
             If you run into a bug, have a feature request, or need help getting started,
             use the support options below.
           </p>
@@ -137,7 +138,7 @@ export default function SupportPage() {
             <div>
               <p className="font-medium text-white mb-3">For bug reports</p>
               <p>
-                Include your macOS version, the database type you were using, and what action caused the issue.
+                Include your operating system and version (macOS or Windows), your SqlMate version, the database type, and what action caused the issue.
                 Screenshots and exact error messages are especially helpful.
               </p>
             </div>

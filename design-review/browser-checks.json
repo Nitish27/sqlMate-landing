@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "viewports": [
+    320,
+    390,
+    768,
+    1024,
+    1440
+  ],
+  "checks": [
+    "download attachment (mocked)",
+    "platform-specific telemetry",
+    "no download modal",
+    "optional signup failure and retry success (mocked)",
+    "keyboard FAQ toggle",
+    "mobile menu open/close/Escape/navigation",
+    "no horizontal overflow",
+    "support/privacy Windows copy",
+    "no page errors",
+    "no unexpected console errors"
+  ],
+  "telemetryRequests": 4,
+  "errors": [],
+  "consoleErrors": [
+    "Failed to load resource: the server responded with a status of 500 (Internal Server Error)"
+  ],
+  "unexpectedConsoleErrors": []
+}

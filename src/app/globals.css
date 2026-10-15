@@ -9,15 +9,15 @@
   --color-border: #333333;
   --color-text-primary: #cccccc;
   --color-text-secondary: #999999;
-  --color-text-muted: #666666;
+  --color-text-muted: #9aa7b6;
   
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 :root {
-  --background: #1e1e1e;
-  --foreground: #cccccc;
+  --background: #0d141e;
+  --foreground: #edf3fa;
 }
 
 body {
