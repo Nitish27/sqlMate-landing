@@ -12,23 +12,25 @@ interface DownloadEnvironment {
   NEXT_PUBLIC_WINDOWS_VERSION?: string;
 }
 
+const FALLBACK_VERSION = "0.10.1";
+
 export const getDownloads = (environment: DownloadEnvironment) => ({
   macos: {
     href: environment.NEXT_PUBLIC_MAC_DOWNLOAD_URL?.trim() ||
-      "https://github.com/Nitish27/sqlMate/releases/download/v0.8.0/SqlMate_0.8.0_universal.dmg",
-    version: environment.NEXT_PUBLIC_MAC_VERSION?.trim() || "0.8.0",
+      `https://github.com/Nitish27/sqlMate/releases/download/v${FALLBACK_VERSION}/SqlMate_${FALLBACK_VERSION}_universal.dmg`,
+    version: environment.NEXT_PUBLIC_MAC_VERSION?.trim() || FALLBACK_VERSION,
     channel: "dmg",
   } satisfies DownloadArtifact,
   windows: {
     href: environment.NEXT_PUBLIC_WINDOWS_DOWNLOAD_URL?.trim() ||
-      "https://github.com/Nitish27/sqlMate/releases/download/v0.8.0/SqlMate_0.8.0_x64-setup.exe",
-    version: environment.NEXT_PUBLIC_WINDOWS_VERSION?.trim() || "0.8.0",
+      `https://github.com/Nitish27/sqlMate/releases/download/v${FALLBACK_VERSION}/SqlMate_${FALLBACK_VERSION}_x64-setup.exe`,
+    version: environment.NEXT_PUBLIC_WINDOWS_VERSION?.trim() || FALLBACK_VERSION,
     channel: "exe",
   } satisfies DownloadArtifact,
   windowsMsi: {
     href: environment.NEXT_PUBLIC_WINDOWS_MSI_URL?.trim() ||
-      "https://github.com/Nitish27/sqlMate/releases/download/v0.8.0/SqlMate_0.8.0_x64_en-US.msi",
-    version: environment.NEXT_PUBLIC_WINDOWS_VERSION?.trim() || "0.8.0",
+      `https://github.com/Nitish27/sqlMate/releases/download/v${FALLBACK_VERSION}/SqlMate_${FALLBACK_VERSION}_x64_en-US.msi`,
+    version: environment.NEXT_PUBLIC_WINDOWS_VERSION?.trim() || FALLBACK_VERSION,
     channel: "msi",
   } satisfies DownloadArtifact,
 });
