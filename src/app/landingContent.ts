@@ -10,8 +10,12 @@ export const faqs = [
     answer: "sqlMate supports PostgreSQL, MySQL, and SQLite. Connect to a database server or open a local SQLite file, then browse tables and write SQL in the same workspace.",
   },
   {
+    question: "How are table edits saved?",
+    answer: "Row edits are staged instead of written immediately. Review your pending changes before committing them together. Safe mode blocks writes entirely.",
+  },
+  {
     question: "How does optional AI work?",
-    answer: "Describe what you want to find in plain English to generate SQL you can review and run. AI assistance requires a configured Groq API key. When you use it, your prompt and relevant context are sent to the AI provider.",
+    answer: "Generate, explain, or fix SQL with your own Gemini, Groq, Claude, or OpenAI developer API key. You review the exact request and destination before sending it. sqlMate does not add result rows or stored credentials, but SQL and schema details you choose to send may be sensitive. Generated SQL never runs automatically. Your provider may bill separately.",
   },
   {
     question: "Does my database traffic go through sqlMate servers?",

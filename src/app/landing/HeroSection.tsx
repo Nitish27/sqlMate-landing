@@ -8,9 +8,9 @@ import { DownloadActions } from "./DownloadActions";
 export function HeroSection() {
   return (
     <section className="hero-section landing-container" aria-labelledby="hero-title">
-      <p className="hero-eyebrow">For macOS &amp; Windows</p>
+      <p className="hero-eyebrow">Free, open-source SQL client for macOS &amp; Windows</p>
       <h1 id="hero-title">Your databases.<br /><span>One focused workspace.</span></h1>
-      <p className="hero-description">Browse tables, write SQL, and explore PostgreSQL, MySQL, and SQLite.<br className="desktop-break" /> All from your desktop.</p>
+      <p className="hero-description">Connect directly to PostgreSQL, MySQL, or SQLite. Browse tables, review row edits, and write SQL from one desktop workspace.</p>
       <DownloadActions location="hero" />
       <a href={GITHUB_URL} className="github-link"><Github size={18} aria-hidden="true" /> View on GitHub <ArrowRight size={16} aria-hidden="true" /></a>
       <ul className="database-list" aria-label="Supported databases">
