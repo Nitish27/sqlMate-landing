@@ -10,7 +10,7 @@ export function HeroSection() {
     <section className="hero-section landing-container" aria-labelledby="hero-title">
       <p className="hero-eyebrow">Free, open-source SQL client for macOS &amp; Windows</p>
       <h1 id="hero-title">Your databases.<br /><span>One focused workspace.</span></h1>
-      <p className="hero-description">Connect directly to PostgreSQL, MySQL, or SQLite. Browse tables, review row edits, and write SQL from one desktop workspace.</p>
+      <p className="hero-description">Connect directly to PostgreSQL, MySQL, or SQLite. Find tables fast, compare databases, inspect values, and write SQL from one desktop workspace.</p>
       <DownloadActions location="hero" />
       <a href={GITHUB_URL} className="github-link"><Github size={18} aria-hidden="true" /> View on GitHub <ArrowRight size={16} aria-hidden="true" /></a>
       <ul className="database-list" aria-label="Supported databases">
