@@ -4,13 +4,13 @@ import { downloads } from "./downloads";
 import { faqs } from "./landingContent";
 
 const title = "SQL Client for macOS & Windows";
-const description = "sqlMate is a free, open-source SQL client for macOS and Windows. Connect to PostgreSQL, MySQL, or SQLite, browse tables, review row edits, and write SQL.";
+const description = "sqlMate is a free SQL client for macOS and Windows. Explore PostgreSQL, MySQL, and SQLite with Quick Open, read-only comparisons, and full-value inspection.";
 const image = { url: "/main_interface.png", width: 2402, height: 1508, alt: "sqlMate desktop database workspace" };
 
 export const landingMetadata: Metadata = {
   title,
   description,
-  keywords: ["sql client", "macOS database client", "Windows database client", "postgresql gui", "mysql gui", "sqlite browser", "ai sql"],
+  keywords: ["sql client", "macOS database client", "Windows database client", "postgresql gui", "mysql gui", "sqlite browser", "database schema compare", "data compare", "ai sql"],
   alternates: { canonical: "https://sqlmate.io/" },
   openGraph: { url: "https://sqlmate.io/", title: `sqlMate — ${title}`, description, images: [image] },
   twitter: { title: `sqlMate — ${title}`, description, images: [image.url] },

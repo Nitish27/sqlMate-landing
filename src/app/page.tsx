@@ -1,6 +1,7 @@
 import { LandingHeader } from "./landing/LandingHeader";
 import { HeroSection } from "./landing/HeroSection";
 import { WorkflowSection } from "./landing/WorkflowSection";
+import { FeatureHighlights } from "./landing/FeatureHighlights";
 import { DownloadSection } from "./landing/DownloadSection";
 import { FaqSection } from "./landing/FaqSection";
 import { LandingFooter } from "./landing/LandingFooter";
@@ -17,6 +18,7 @@ export default function Home() {
       <main id="main-content">
         <HeroSection />
         <WorkflowSection />
+        <FeatureHighlights />
         <DownloadSection />
         <FaqSection />
       </main>
