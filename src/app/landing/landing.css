@@ -73,6 +73,20 @@
 .capability-eyebrow { display: block; color: #72bfff; font-family: var(--font-geist-mono), monospace; font-size: 12px; letter-spacing: .08em; }
 .capability-list h3 { font-size: clamp(21px, 2vw, 27px); font-weight: 600; line-height: 1.3; letter-spacing: -.02em; margin-top: 15px; }
 .capability-list p { color: var(--landing-muted); font-size: 16px; line-height: 1.7; max-width: 510px; margin-top: 12px; }
+.capability-showcase { margin-top: 42px; padding: 30px; border: 1px solid #2b4962; border-radius: 20px; background: radial-gradient(circle at 100% 0%, #18354a 0, transparent 38%), var(--landing-surface); }
+.capability-showcase + .capability-showcase { margin-top: 24px; }
+.capability-showcase--quick-open { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); align-items: center; gap: 34px; }
+.capability-showcase--quick-open .capability-showcase-intro { display: block; margin-bottom: 0; }
+.capability-showcase--quick-open .capability-showcase-intro > p { margin-top: 16px; }
+.capability-showcase-intro { display: flex; align-items: end; justify-content: space-between; gap: 40px; margin-bottom: 24px; }
+.capability-showcase-intro h3 { margin-top: 9px; font-size: clamp(22px, 2.2vw, 30px); font-weight: 600; line-height: 1.25; letter-spacing: -.025em; }
+.capability-showcase-intro > p { max-width: 450px; color: var(--landing-muted); font-size: 15px; line-height: 1.65; }
+.capability-showcase figure { margin: 0; }
+.capability-showcase-image { display: block; overflow: hidden; border: 1px solid #405467; border-radius: 12px; background: #1b1b1b; box-shadow: 0 20px 55px #00000045; }
+.capability-showcase-image img { display: block; width: 100%; height: auto; }
+.capability-showcase figcaption { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 20px; margin-top: 14px; color: var(--landing-muted); font-size: 13px; }
+.capability-showcase figcaption a { color: var(--landing-link); text-decoration: underline; text-underline-offset: 3px; }
+.capability-showcase figcaption a:hover { color: #a0d4ff; }
 .download-section { text-align: center; margin-top: 88px; padding: 42px 40px 28px; border: 1px solid #263e52; border-radius: 20px; background: var(--landing-surface); }
 .download-section h2 { font-size: 42px; }
 .download-section .section-description { font-size: 18px; }
@@ -172,6 +186,15 @@
   .capability-list li, .capability-list li:nth-child(even) { min-height: 0; border-left: 0; padding: 27px 0 30px; }
   .capability-list h3 { font-size: 21px; margin-top: 10px; }
   .capability-list p { font-size: 15px; margin-top: 8px; }
+  .capability-showcase { margin-top: 28px; padding: 16px; border-radius: 14px; }
+  .capability-showcase--quick-open { display: block; }
+  .capability-showcase-intro { display: block; margin-bottom: 18px; }
+  .capability-showcase--quick-open .capability-showcase-intro { margin-bottom: 18px; }
+  .capability-showcase--quick-open .capability-showcase-intro > p { margin-top: 10px; }
+  .capability-showcase-intro h3 { font-size: 23px; }
+  .capability-showcase-intro > p { margin-top: 10px; font-size: 14px; }
+  .capability-showcase-image { border-radius: 7px; }
+  .capability-showcase figcaption { font-size: 12px; }
   .download-section { margin-top: 48px; padding: 30px 20px 20px; border-radius: 14px; }
   .download-section .section-description { font-size: 16px; }
   .download-actions-full { margin-top: 28px; }
