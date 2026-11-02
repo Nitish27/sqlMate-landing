@@ -4,10 +4,12 @@ import Link from "next/link";
 import { ThemeToggle } from "../ThemeToggle";
 import { ArrowLeft, ShieldCheck } from "lucide-react";
 
+const pageTitle = "Privacy Policy";
+const pageDescription = "Read how sqlMate handles locally stored settings and credentials, direct database connections, optional AI requests, and limited first-party usage telemetry.";
+
 export const metadata: Metadata = {
-  title: "Privacy Policy",
-  description:
-    "Privacy policy for SqlMate on macOS and Windows, covering local storage, selected files, AI-assisted SQL requests, and usage telemetry.",
+  title: pageTitle,
+  description: pageDescription,
   keywords: [
     "SqlMate privacy policy",
     "database client privacy",
@@ -23,9 +25,8 @@ export const metadata: Metadata = {
   },
   openGraph: {
     url: "https://sqlmate.io/privacy/",
-    title: "SqlMate Privacy Policy",
-    description:
-      "Privacy policy for SqlMate, covering local storage, selected files, AI-assisted SQL requests, and app data handling.",
+    title: `${pageTitle} | sqlMate`,
+    description: pageDescription,
     images: [
       {
         url: "/app-icon.png",
@@ -36,9 +37,8 @@ export const metadata: Metadata = {
     ],
   },
   twitter: {
-    title: "SqlMate Privacy Policy",
-    description:
-      "Privacy policy for SqlMate, covering local storage, selected files, AI-assisted SQL requests, and app data handling.",
+    title: `${pageTitle} | sqlMate`,
+    description: pageDescription,
     images: ["/app-icon.png"],
   },
 };

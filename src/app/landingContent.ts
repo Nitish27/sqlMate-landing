@@ -33,6 +33,10 @@ export const faqs = [
     answer: "Yes. sqlMate is free and open source under the MIT License. You do not need an account to use the app.",
   },
   {
+    question: "Is sqlMate a TablePlus alternative?",
+    answer: "Yes. sqlMate is a free, open-source SQL client for macOS and Windows. It supports PostgreSQL, MySQL, and SQLite, with saved queries, read-only comparisons, and staged row edits. Features differ between apps, so check that it fits your workflow before switching.",
+  },
+  {
     question: "Which databases can I connect to?",
     answer: "sqlMate supports PostgreSQL, MySQL, and SQLite. Connect to a database server or open a local SQLite file, then browse tables and write SQL in the same workspace.",
   },

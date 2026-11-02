@@ -26,6 +26,14 @@ test("comparison FAQ does not imply a full-table diff or write capability", () =
   assert.match(answer, /not a full-table comparison/i);
 });
 
+test("TablePlus alternative FAQ describes supported capabilities without claiming parity", () => {
+  const answer = faqs.find(({ question }) => question === "Is sqlMate a TablePlus alternative?")?.answer;
+  assert.ok(answer);
+  assert.match(answer, /free, open-source/i);
+  assert.match(answer, /PostgreSQL, MySQL, and SQLite/);
+  assert.match(answer, /Features differ between apps/);
+});
+
 test("AI FAQ describes supported providers and reviewed requests", () => {
   const answer = faqs.find(({ question }) => question === "How does optional AI work?")?.answer;
 

@@ -9,7 +9,7 @@ export function HeroSection() {
   return (
     <section className="hero-section landing-container" aria-labelledby="hero-title">
       <div className="hero-copy">
-        <p className="hero-eyebrow"><span className="status-dot" /> The open-source database workspace</p>
+        <p className="hero-eyebrow"><span className="status-dot" /> The free, open-source SQL client</p>
         <h1 id="hero-title">Work with data.<br /><span>Stay in control.</span></h1>
         <p className="hero-description">Query, explore, and compare PostgreSQL, MySQL, and SQLite in one focused desktop app. Your databases stay yours.</p>
         <DownloadActions location="hero" />

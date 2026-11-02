@@ -4,10 +4,12 @@ import Link from "next/link";
 import { ArrowLeft, Bug, ExternalLink, Github, MessageSquare } from "lucide-react";
 import { ThemeToggle } from "../ThemeToggle";
 
+const pageTitle = "Support & Setup Help";
+const pageDescription = "Get help with sqlMate for macOS and Windows. Report bugs, ask setup or database connection questions, and request features through GitHub Issues.";
+
 export const metadata: Metadata = {
-  title: "Support",
-  description:
-    "Support for the SqlMate desktop SQL client on macOS and Windows, including installation help, bug reports, and feature requests.",
+  title: pageTitle,
+  description: pageDescription,
   keywords: [
     "SqlMate support",
     "SqlMate help",
@@ -24,9 +26,8 @@ export const metadata: Metadata = {
   },
   openGraph: {
     url: "https://sqlmate.io/support/",
-    title: "SqlMate Support",
-    description:
-      "Support resources for SqlMate, including bug reports, feature requests, setup help, and App Store support.",
+    title: `${pageTitle} | sqlMate`,
+    description: pageDescription,
     images: [
       {
         url: "/app-icon.png",
@@ -37,9 +38,8 @@ export const metadata: Metadata = {
     ],
   },
   twitter: {
-    title: "SqlMate Support",
-    description:
-      "Support resources for SqlMate, including bug reports, feature requests, setup help, and App Store support.",
+    title: `${pageTitle} | sqlMate`,
+    description: pageDescription,
     images: ["/app-icon.png"],
   },
 };

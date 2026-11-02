@@ -1,3 +1,4 @@
+html:has(.landing-page) { scroll-behavior: smooth; }
 .landing-page {
   --landing-bg: #0d141e;
   --landing-surface: #101c29;
@@ -431,5 +432,6 @@
   .database-list li { gap: 5px; padding-inline: 7px; font-size: 10px; }
 }
 @media (prefers-reduced-motion: reduce) {
+  html:has(.landing-page) { scroll-behavior: auto; }
   .hero-copy, .product-preview { animation: none; }
 }

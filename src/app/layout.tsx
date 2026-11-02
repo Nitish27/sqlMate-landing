@@ -22,11 +22,11 @@ const themeScript = `try{var saved=localStorage.getItem('sqlmate-theme');documen
 export const metadata: Metadata = {
   metadataBase: new URL("https://sqlmate.io"),
   title: {
-    default: "SqlMate",
-    template: "%s | SqlMate",
+    default: "sqlMate | Free SQL Client for macOS & Windows",
+    template: "%s | sqlMate",
   },
   description:
-    "Desktop SQL client for macOS and Windows with PostgreSQL, MySQL, and SQLite support, table browsing, query editing, and optional AI-assisted SQL.",
+    "Free, open-source SQL client for macOS and Windows. Query PostgreSQL, MySQL, and SQLite, explore tables, and compare schemas in one desktop app.",
   keywords: [
     "sql client",
     "database client",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Nitish", url: "https://github.com/Nitish27" }],
   creator: "Nitish",
-  applicationName: "SqlMate",
+  applicationName: "sqlMate",
   robots: {
     index: true,
     follow: true,
