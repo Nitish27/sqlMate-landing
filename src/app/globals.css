@@ -3,21 +3,42 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-accent: #007acc;
-  --color-accent-muted: rgba(0, 122, 204, 0.4);
-  --color-surface: #252526;
-  --color-border: #333333;
-  --color-text-primary: #cccccc;
-  --color-text-secondary: #999999;
-  --color-text-muted: #9aa7b6;
+  --color-accent: var(--accent);
+  --color-accent-muted: var(--accent-muted);
+  --color-surface: var(--surface);
+  --color-border: var(--border);
+  --color-text-primary: var(--foreground);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
   
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 :root {
-  --background: #0d141e;
-  --foreground: #edf3fa;
+  color-scheme: light;
+  --background: #f7f8f6;
+  --foreground: #142535;
+  --surface: #ffffff;
+  --border: #d9e1e4;
+  --text-secondary: #526575;
+  --text-muted: #657887;
+  --accent: #075ccc;
+  --accent-muted: #e2efff;
+  --glass: rgba(255, 255, 255, .85);
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --background: #0d151d;
+  --foreground: #edf4f8;
+  --surface: #14212c;
+  --border: #2a3c49;
+  --text-secondary: #a8bbc9;
+  --text-muted: #a4b6c4;
+  --accent: #63b1ff;
+  --accent-muted: #17344d;
+  --glass: rgba(20, 33, 44, .85);
 }
 
 body {
@@ -27,16 +48,19 @@ body {
   overflow-x: hidden;
 }
 
-/* Glassmorphism utility */
 .glass {
-  background: rgba(30, 30, 30, 0.7);
+  background: var(--glass);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
 }
 
+.theme-toggle { display: inline-flex; align-items: center; justify-content: center; gap: 9px; min-height: 42px; padding: 0 14px; border: 1px solid var(--border); border-radius: 999px; background: var(--surface); color: var(--foreground); font: 600 13px var(--font-geist-sans), sans-serif; cursor: pointer; transition: border-color .2s ease, transform .2s ease, background .2s ease; }
+.theme-toggle:hover { border-color: var(--accent); transform: translateY(-1px); }
+.theme-toggle:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+
 .accent-gradient {
-  background: linear-gradient(135deg, #007acc 0%, #00a2ff 100%);
+  background: linear-gradient(135deg, var(--accent) 0%, #24a9ef 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { ThemeToggle } from "../ThemeToggle";
 import { ArrowLeft, ShieldCheck } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -47,16 +48,16 @@ const updatedOn = "October 13, 2026";
 export default function PrivacyPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <header className="border-b border-white/5 glass">
+      <header className="border-b border-border glass">
         <div className="max-w-5xl mx-auto px-6 py-5 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3">
             <Image src="/app-icon.svg" alt="SqlMate Logo" width={32} height={32} />
             <span className="font-bold text-xl tracking-tight">SqlMate</span>
           </Link>
-          <Link href="/" className="inline-flex items-center gap-2 text-text-muted hover:text-white transition-colors">
+          <div className="flex items-center gap-3"><ThemeToggle /><Link href="/" className="inline-flex items-center gap-2 text-text-muted hover:text-foreground transition-colors">
             <ArrowLeft size={16} />
-            Back to home
-          </Link>
+            <span className="hidden sm:inline">Back to home</span>
+          </Link></div>
         </div>
       </header>
 
@@ -74,7 +75,7 @@ export default function PrivacyPage() {
         </div>
 
         <div className="space-y-8 mt-14">
-          <section className="glass rounded-3xl border border-white/5 p-8 md:p-10">
+          <section className="glass rounded-3xl border border-border p-8 md:p-10">
             <h2 className="text-2xl font-semibold mb-4">1. Information SqlMate stores locally</h2>
             <p className="text-text-secondary leading-relaxed">
               SqlMate stores saved connection settings, query history, and user interface state locally on your device
@@ -83,7 +84,7 @@ export default function PrivacyPage() {
             </p>
           </section>
 
-          <section className="glass rounded-3xl border border-white/5 p-8 md:p-10">
+          <section className="glass rounded-3xl border border-border p-8 md:p-10">
             <h2 className="text-2xl font-semibold mb-4">2. Database connections</h2>
             <p className="text-text-secondary leading-relaxed">
               SqlMate connects directly from your device to the databases you choose, including PostgreSQL, MySQL,
@@ -91,7 +92,7 @@ export default function PrivacyPage() {
             </p>
           </section>
 
-          <section className="glass rounded-3xl border border-white/5 p-8 md:p-10">
+          <section className="glass rounded-3xl border border-border p-8 md:p-10">
             <h2 className="text-2xl font-semibold mb-4">3. AI-assisted SQL</h2>
             <p className="text-text-secondary leading-relaxed">
               If you choose to use AI-assisted SQL features, the prompt you enter and related context needed to generate
@@ -99,7 +100,7 @@ export default function PrivacyPage() {
             </p>
           </section>
 
-          <section className="glass rounded-3xl border border-white/5 p-8 md:p-10">
+          <section className="glass rounded-3xl border border-border p-8 md:p-10">
             <h2 className="text-2xl font-semibold mb-4">4. Files you select</h2>
             <p className="text-text-secondary leading-relaxed">
               SqlMate can access files you explicitly choose, such as SQLite databases, import files, SSL certificates,
@@ -107,7 +108,7 @@ export default function PrivacyPage() {
             </p>
           </section>
 
-          <section className="glass rounded-3xl border border-white/5 p-8 md:p-10">
+          <section className="glass rounded-3xl border border-border p-8 md:p-10">
             <h2 className="text-2xl font-semibold mb-4">5. Tracking and advertising</h2>
             <p className="text-text-secondary leading-relaxed">
               SqlMate does not use third-party advertising SDKs and does not sell your personal information.
@@ -123,7 +124,7 @@ export default function PrivacyPage() {
             </p>
           </section>
 
-          <section className="glass rounded-3xl border border-white/5 p-8 md:p-10">
+          <section className="glass rounded-3xl border border-border p-8 md:p-10">
             <h2 className="text-2xl font-semibold mb-4">6. Contact</h2>
             <p className="text-text-secondary leading-relaxed">
               If you have privacy questions about SqlMate, please contact the project through{" "}
@@ -131,20 +132,20 @@ export default function PrivacyPage() {
                 href="https://github.com/Nitish27/sqlMate/issues"
                 target="_blank"
                 rel="noreferrer"
-                className="text-accent hover:text-white transition-colors"
+                className="text-accent hover:text-foreground transition-colors"
               >
                 GitHub Issues
               </a>.
             </p>
           </section>
 
-          <section className="glass rounded-3xl border border-white/5 p-8 md:p-10">
+          <section className="glass rounded-3xl border border-border p-8 md:p-10">
             <h2 className="text-2xl font-semibold mb-4">7. Related pages</h2>
             <div className="flex flex-col gap-3 text-text-secondary leading-relaxed md:flex-row md:gap-8">
-              <Link href="/" className="text-accent hover:text-white transition-colors">
+              <Link href="/" className="text-accent hover:text-foreground transition-colors">
                 Visit the SqlMate homepage
               </Link>
-              <Link href="/support" className="text-accent hover:text-white transition-colors">
+              <Link href="/support" className="text-accent hover:text-foreground transition-colors">
                 Get support for SqlMate
               </Link>
             </div>

@@ -6,10 +6,10 @@ export function FeatureHighlights() {
     <section className="capabilities-section landing-container" aria-labelledby="capabilities-title">
       <div className="capabilities-intro">
         <div>
-          <p className="capabilities-eyebrow">Built for the questions after the first query</p>
-          <h2 id="capabilities-title">Stay oriented as you go deeper.</h2>
+          <p className="section-kicker">02 / MADE FOR THE DEEPER QUESTIONS</p>
+          <h2 id="capabilities-title">The details are<br /><em>the whole point.</em></h2>
         </div>
-        <p>From finding a table to understanding a difference, sqlMate keeps exploration in one workspace without turning a look into a write.</p>
+        <p>Find the right table. Understand a relationship. See exactly what changed. All without turning a look into a write.</p>
       </div>
       <ol className="capability-list">
         {featureHighlights.map(({ id, eyebrow, title, description }) => (
@@ -20,6 +20,7 @@ export function FeatureHighlights() {
           </li>
         ))}
       </ol>
+      <div id="showcase" className="showcase-grid">
       <div className="capability-showcase capability-showcase--quick-open">
         <div className="capability-showcase-intro">
           <div>
@@ -124,6 +125,7 @@ export function FeatureHighlights() {
           </a>
           <figcaption>Fictional product details, expanded in the JSON tree. <a href="/features/inspect-value.png" target="_blank" rel="noopener noreferrer">View full-size image</a></figcaption>
         </figure>
+      </div>
       </div>
     </section>
   );
